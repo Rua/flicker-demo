@@ -47,7 +47,6 @@ fn main() -> anyhow::Result<()> {
         .context("Couldn't create Vulkan rendering window")?;
 
     // Setup debug callback for validation layers
-    #[cfg(debug_assertions)]
     let _debug_callback = DebugCallback::new(
         &instance,
         MessageSeverity {
@@ -62,9 +61,6 @@ fn main() -> anyhow::Result<()> {
         },
     )
     .ok();
-
-    #[cfg(not(debug_assertions))]
-    let debug_callback = None;
 
     // Create Vulkan device
     let (device, graphics_queue) =

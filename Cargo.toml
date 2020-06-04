@@ -1,0 +1,14 @@
+[package]
+name = "flicker-demo"
+version = "0.1.0"
+authors = ["Rua <ruawhitepaw@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0"
+vulkano = "0.19"
+vulkano-shaders = "0.19"
+vulkano-win = "0.19"
+winit = "0.22.2"
